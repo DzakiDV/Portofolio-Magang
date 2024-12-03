@@ -1,0 +1,248 @@
+/* Font dan Reset */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #1E1E1E;
+    padding: 10px 20px !important;
+    padding-right: 30px !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+}
+
+.hero {
+    background: linear-gradient(135deg, #4C1407, #121212);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content span {
+    color: #FFD700;
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #FFC107;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.about, .contact {
+    background: #1E1E1E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.projects {
+    text-align: center;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1E1E1E;
+    border: 1px solid rgb(128, 128, 128);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 40vw;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+}
+.project-card p {
+    color: rgb(186, 186, 186);
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.contact button {
+    background-color: #4C1407;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1E1E1E;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#nav-menu ul li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#nav-menu ul li a:hover {
+    color: #FFD700;
+}
+
+/* Responsive: Hamburger menu */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 70%;
+        height: 100vh;
+        background-color: #1E1E1E;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #nav-menu ul li a {
+        font-size: 1.2rem;
+    }
+    .about {
+        text-align: center;
+    }
+    .project-card {
+        width: 90vw;
+        margin-top: 3vh;
+    }
+}
